@@ -2,16 +2,18 @@
 
 ## **ハンズオン形式でFlutterアプリを作成しましょう**
 
-![](.gitbook/assets/1\_flutter\_2021\_0925\_2335.png)
+![](.gitbook/assets/2\_firebase\_2021\_0925\_2335.png)
 
-今回のハンズオンではFlutterを使って**画面レイアウト**と**状態管理**の構築について学んでいきます。
+今回のハンズオンではFlutter×Firebaseを使い、**認証連携**と**データベース連携**について学んでいきます。
 
-次のようなトピックでの進行していきます
+次のトピックで進行していきます。
 
-* Flutterとは？Widgetとは？
-* マテリアルデザインを使った画面レイアウトの実装
-* Flutterの状態管理のトレンドは？
-* StateNotifier + freezed + Riverpod + Flutter Hooks を使った状態管理機能の実装
+* Firebaseとは？
+* FirebaseAuthを使った認証連携の実装
+* NoSQLとは？Firestoreとは？
+* FlutterからFirebaseへ接続（web）
+* Firestoreを使ったデータベース連携の実装
+* Firebaseにデプロイする
 
 ## **事前準備**
 
@@ -32,4 +34,11 @@ Gitpodの登録にアカウントが必要になります。
 ブラウザ上で仮想環境を立ち上げることのできるサービスです。基本無料です。\
 ハンズオンでは開発環境を揃えるため、Gitpodに揃えた環境を立ち上げてコマンドやファイルの編集を行います。\
 GitHubアカウントと連携させる形で登録いただければよいかと思います。
+
+#### [Firebase](https://firebase.google.com/?hl=ja)
+
+[![](https://github.com/MarkingCloud/connpass\_image/raw/main/flutter\_sns/firebaselogo.png)](https://firebase.google.com/?hl=ja)
+
+今回取り扱うサービスのFirebaseです。基本無料です。\
+Googleアカウントと連携することでアカウントが作成されます。
 

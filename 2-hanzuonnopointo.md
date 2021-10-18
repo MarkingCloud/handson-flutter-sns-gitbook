@@ -1,32 +1,34 @@
 # 2. ハンズオンのポイント
 
-## このハンズオンで学べる事
+## このハンズオンで学べる事 <a href="2-hansuonnohointo" id="2-hansuonnohointo"></a>
 
-* Flutterとは何か（ちょっと）分かる
-* Material Designで画面レイアウトが（ちょっと）作れる
-* 状態管理に関するライブラリの使い方が（ちょっと）分かる
+* Firebase とは何か(ちょっと)分かる
+* Firebase Authentication の使い方が(ちょっと)分かる
+* Firestore の使い方が(ちょっと)分かる
+* Hosting へのデプロイ方法が(ちょっと)分かる
 
-## Flutterとは何か（ちょっと）分かる
+## Firebase とは何か(ちょっと)分かる
 
-Flutterとは何かを解説します。\
-ちょっとだけ語れるようになります。  &#x20;
+Firebaase とは何かを解説します。\
+ちょっとだけ語れるようになります。
 
-&#x20;![](.gitbook/assets/flutter.png)
+![](https://markingcloud.github.io/handson-markdowne-editor\_part2-firebase/vuepress/docs/curriculums/firebase.png)
 
-## Material Designで画面レイアウトが（ちょっと）作れる
+## Firebase Authentication の使い方が(ちょっと)分かる
 
-Flutterを使えばとても簡単にMaterial Designを導入することが可能です。\
-Material Designを使ってどのように画面レイアウトを作っていくのかを（ちょっと）解説します。
+Firebase Auth の使い方を解説します。\
+また、Flutterでのログイン状態の切り変えについてコードを確認します。
 
-![](<.gitbook/assets/Material Design.png>)&#x20;
+**図を挿入**
 
-## 状態管理に関するライブラリの使い方が（ちょっと）分かる
+## Firestore の使い方が(ちょっと)分かる
 
-Flutterの状態管理については技術の移り変わりが激しい状況になっています。\
-今回はその中でもモダンな構成での状態管理を（ちょっと）解説します。\
+Firebase の提供する DB である Cloud Firestore について解説します。\
+また、実際にコードを記述していくつかのメソッドを使ってもらいます。![](https://markingcloud.github.io/handson-markdowne-editor\_part2-firebase/vuepress/docs/curriculums/firestore.png)
 
+## Hosting へのデプロイ方法が(ちょっと)分かる
 
-![](.gitbook/assets/riverpod.png)Riverpod![](.gitbook/assets/flutterhooks.png)Flutter Hooks
+Firebase のホスティング機能である Hosting 機能を使ってみます。\
+Firebase へのデプロイの手軽さを体験してもらいます。
 
-![](.gitbook/assets/freezed.png)freezed    ![](.gitbook/assets/statenotifier.png) StateNotifier
-
+![](https://markingcloud.github.io/handson-markdowne-editor\_part2-firebase/vuepress/docs/curriculums/hosting.png)
