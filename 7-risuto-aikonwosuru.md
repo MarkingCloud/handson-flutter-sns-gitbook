@@ -2,7 +2,7 @@
 
 ## 1. StateProviderで投稿リストを保持する
 
-まずは![](.gitbook/assets/riverpod.png)**Riverpod **と![](.gitbook/assets/flutterhooks.png)**Flutter Hooks **を使って投稿リストを作成しましょう。
+まずは![](<.gitbook/assets/riverpod (1).png>)\*\*Riverpod \*\*と![](<.gitbook/assets/flutterhooks (1).png>)\*\*Flutter Hooks \*\*を使って投稿リストを作成しましょう。
 
 ここでは**Riverpod**の**StateProvider**を使います。\
 **StateProvider**とは状態を保持できるシンプルなProviderです。
@@ -13,7 +13,7 @@
 では実際に使って動きを見てみましょう。次の操作を行ってください。
 
 {% hint style="success" %}
-### work
+#### work
 
 * `timeline/timeline_viewmodel.dart`の`postsProvider`のコメントアウトを解除。
 
@@ -57,7 +57,7 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 投稿がカードになって表示されるかと思います。
 
-![](<.gitbook/assets/image (4).png>)
+![](<.gitbook/assets/image (4) (1).png>)
 
 ### 解説
 
@@ -104,7 +104,6 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 {% tab title="viewmodel" %}
 {% code title="timeline/timeline_viewmodel.dart" %}
 ```dart
-
 // Todo
 final postsProvider = StateProvider(
   (ref) => [
@@ -148,7 +147,7 @@ final postsProvider = StateProvider(
 ではユーザー情報を更新できるようにしましょう。次の操作を行ってください。
 
 {% hint style="success" %}
-### work
+#### work
 
 * `timeline/timeline_viewmodel.dart`の`signIn`と`signOut`のコメントアウトを解除。
 
@@ -176,4 +175,4 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 これでログインボタンが機能するようになりました。(ログインするとおやじのイラストが表示されます)
 
-![](<.gitbook/assets/image (5).png>)
+![](<.gitbook/assets/image (5) (1).png>)

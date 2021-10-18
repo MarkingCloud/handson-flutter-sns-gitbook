@@ -2,7 +2,7 @@
 
 ## 1. テキストフォームとProviderをデータバインディングさせる
 
-次は![](.gitbook/assets/freezed.png)**freezed** と![](.gitbook/assets/statenotifier.png)**StateNotifier **も使って、投稿機能を実装しましょう。
+次は![](<.gitbook/assets/freezed (1).png>)**freezed** と![](<.gitbook/assets/statenotifier (1).png>)\*\*StateNotifier \*\*も使って、投稿機能を実装しましょう。
 
 まず**freezed**ですが、これは**immutableな(変更不可能な)クラス**が必要とするいろいろな機能を、\
 イイ感じに生成してくれるパッケージです。
@@ -34,7 +34,7 @@ abstract class Post with _$Post {
 では実際に動きを見てみましょう。次の操作を行ってください。
 
 {% hint style="success" %}
-### work
+#### work
 
 * `postmodal/postmodal_viewmodel.dart`の`changeBody`のコメントアウトを削除。
 
@@ -81,23 +81,19 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 そしてフォームに文字を打ち込むごとに値を更新し、その結果を文字数カウントに反映させることで、\
 **テキストフォーム**と**Provider**と**文字数カウント**でデータバインディングするようにしています。
 
-
-
 todo: いい感じの図
-
-
 
 自分の値を書き換えるときは`state = state.copyWith(body: value)`と記述します。
 
 `state`で自分自身にアクセスし、`copyWith`で現在の値をコピーした上で新しい値で更新します。\
-`copyWith`メソッドは**freezedが自動で生成**してくれたメソッドです**。**(自力で書くとかなり大変)
+`copyWith`メソッドは**freezedが自動で生成**してくれたメソッドです\*\*。\*\*(自力で書くとかなり大変)
 
 ## 2. 投稿機能を実装
 
 では最後に投稿機能を実装しましょう。次の操作を行ってください。
 
 {% hint style="success" %}
-### work
+#### work
 
 * `postmodal/postmodal_viewmodel.dart`の`addPost`のコメントアウトを削除。
 

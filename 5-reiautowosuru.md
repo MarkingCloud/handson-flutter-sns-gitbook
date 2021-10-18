@@ -90,7 +90,7 @@ class TimeLinePage extends HookWidget {
 では実際にAppBarを表示してみましょう。次の操作を行ってください。
 
 {% hint style="success" %}
-### work
+#### work
 
 * `timeline/timeline_view.dart`の`Scaffold`の`appBar`のコメントアウトを解除。
 
@@ -119,20 +119,20 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 画面上部にAppBarが表示されたかと思います。簡単ですね！
 
-![](<.gitbook/assets/image (1).png>)
+![](<.gitbook/assets/image (1) (1).png>)
 
 ## 3. 宣言的UIについて
 
 なんたらかんたら
 
-![](<.gitbook/assets/image (2).png>)
+![](<.gitbook/assets/image (2) (1).png>)
 
 ## 4. floatingActionButtonを表示する
 
 次は右下の追加ボタンを作成しましょう。次の操作を行ってください。
 
 {% hint style="success" %}
-### work
+#### work
 
 * `timeline/timeline_view.dart`の`Scaffold`の`floatingActionButton`コメントアウトを解除。
 
@@ -161,4 +161,4 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 コレで右下のよく見るボタンが簡単に作成できました！
 
-![](<.gitbook/assets/image (3).png>)
+![](<.gitbook/assets/image (3) (1).png>)

@@ -2,6 +2,6 @@
 
 あーだこーだ、状態管理の技術の移り変わりとか。今のトレンドとか
 
-![](.gitbook/assets/riverpod.png)Riverpod![](.gitbook/assets/flutterhooks.png)Flutter Hooks
+![](<.gitbook/assets/riverpod (1).png>)Riverpod![](<.gitbook/assets/flutterhooks (1).png>)Flutter Hooks
 
-![](.gitbook/assets/freezed.png)freezed    ![](.gitbook/assets/statenotifier.png) StateNotifier
+![](<.gitbook/assets/freezed (1).png>)freezed ![](<.gitbook/assets/statenotifier (1).png>) StateNotifier
