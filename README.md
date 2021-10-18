@@ -1,35 +1,19 @@
-# 1. ハンズオン概要
+# はじめに
 
 ## **ハンズオン形式でFlutterアプリを作成しましょう**
 
-![](.gitbook/assets/1\_flutter\_2021\_0925\_2335.png)
+今回は10月～12月にかけて、**Flutterを題材に3部構成のハンズオン**を実施します！\
+[Part1（10月19日）](https://connpass.com/event/226154)ではフロントエンドとして[**Flutter**](https://flutter.dev)、\
+[Part2（11月16日）](https://connpass.com/event/226165)ではバックエンドとして[**Firebase**](https://firebase.google.com/?hl=ja)、\
+[Part3（12月21日）](https://connpass.com/event/226166)ではCI/CDツールとして[**Codemagic**](https://codemagic.io/start/)を扱います。
 
-今回のハンズオンではFlutterを使って**画面レイアウト**と**状態管理**の構築について学んでいきます。
+※他のハンズオンに参加していなくてもそれぞれ単体で問題なく進めることができます。
 
-次のようなトピックでの進行していきます
+## アプリサンプル
 
-* Flutterとは？Widgetとは？
-* マテリアルデザインを使った画面レイアウトの実装
-* Flutterの状態管理のトレンドは？
-* StateNotifier + freezed + Riverpod + Flutter Hooks を使った状態管理機能の実装
+[**簡易的なSNSのようなアプリ**](https://flutter-sns-0922.web.app)を作成しました。\
+今回のハンズオンではこちらのアプリをFlutterとFirebaseを使って作成していきます。
 
-## **事前準備**
+![](.gitbook/assets/handson-flutter-sns\_demo.gif)
 
-ハンズオンの中で以下のサービスを利用します。\
-スムーズに進行するため事前にアカウントの準備をお願いいたします。
-
-#### [GitHub](https://github.com)
-
-[![](https://github.com/MarkingCloud/connpass\_image/raw/main/flutter\_sns/octocat.png)](https://github.com)
-
-おなじみのGitのリモートリポジトリサービスです。基本無料です。\
-Gitpodの登録にアカウントが必要になります。
-
-#### [Gitpod](https://www.gitpod.io)
-
-[![](https://github.com/MarkingCloud/connpass\_image/raw/main/flutter\_sns/gitpod.png)](https://www.gitpod.io)
-
-ブラウザ上で仮想環境を立ち上げることのできるサービスです。基本無料です。\
-ハンズオンでは開発環境を揃えるため、Gitpodに揃えた環境を立ち上げてコマンドやファイルの編集を行います。\
-GitHubアカウントと連携させる形で登録いただければよいかと思います。
-
+\
