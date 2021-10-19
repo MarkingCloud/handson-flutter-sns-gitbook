@@ -40,18 +40,6 @@ class MyApp extends StatelessWidget {
 
 L21～L30に注目してください。**Widget**という見慣れない言葉が書かれています。
 
-{% code title="main.dart" %}
-```dart
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MarkingCloud SNS',
-      home: const TimeLinePage(),
-      // ...
-    );
-  }
-```
-{% endcode %}
-
 **Widget**とはFlutterが定義しているクラスで、画面を構成するパーツを意味します。\
 **ButtonWidget**などオブジェクトを配置するものや、**CenterWidget**など位置を調整するものがあります。
 
@@ -95,7 +83,7 @@ class TimeLinePage extends HookWidget {
 * `timeline/timeline_view.dart`の`Scaffold`の`appBar`のコメントアウトを解除。
 
 {% code title="timeline/timeline_view.dart " %}
-```dart
+```diff
   // Todo
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,13 +109,7 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 ![](<.gitbook/assets/image (1) (1).png>)
 
-## 3. 宣言的UIについて
-
-なんたらかんたら
-
-![](<.gitbook/assets/image (2) (1).png>)
-
-## 4. floatingActionButtonを表示する
+## 3. floatingActionButtonを表示する
 
 次は右下の追加ボタンを作成しましょう。次の操作を行ってください。
 
@@ -137,7 +119,7 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 * `timeline/timeline_view.dart`の`Scaffold`の`floatingActionButton`コメントアウトを解除。
 
 {% code title="timeline/timeline_view.dart " %}
-```dart
+```diff
   // Todo
   Widget build(BuildContext context) {
     return Scaffold(

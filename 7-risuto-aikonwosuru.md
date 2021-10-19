@@ -2,7 +2,7 @@
 
 ## 1. StateProviderで投稿リストを保持する
 
-まずは![](<.gitbook/assets/riverpod (1).png>)\*\*Riverpod \*\*と![](<.gitbook/assets/flutterhooks (1).png>)\*\*Flutter Hooks \*\*を使って投稿リストを作成しましょう。
+まずは![](<.gitbook/assets/riverpod (1).png>)**Riverpod** と![](<.gitbook/assets/flutterhooks (1).png>) **Flutter Hooks** を使って投稿リストを作成しましょう。
 
 ここでは**Riverpod**の**StateProvider**を使います。\
 **StateProvider**とは状態を保持できるシンプルなProviderです。
@@ -18,7 +18,7 @@
 * `timeline/timeline_viewmodel.dart`の`postsProvider`のコメントアウトを解除。
 
 {% code title="timeline/timeline_viewmodel.dart" %}
-```dart
+```diff
 // Todo
 final postsProvider = StateProvider(
   (ref) => [
@@ -63,7 +63,7 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 軽く解説を行います。
 
-**TODO**
+
 
 * `timeline/timeline_view.dart`の`_timeLine`を確認。
 

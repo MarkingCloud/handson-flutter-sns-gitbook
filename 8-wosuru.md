@@ -2,7 +2,7 @@
 
 ## 1. テキストフォームとProviderをデータバインディングさせる
 
-次は![](<.gitbook/assets/freezed (1).png>)**freezed** と![](<.gitbook/assets/statenotifier (1).png>)\*\*StateNotifier \*\*も使って、投稿機能を実装しましょう。
+次は![](<.gitbook/assets/freezed (1).png>)**freezed** と![](<.gitbook/assets/statenotifier (1).png>)**StateNotifier** も使って、投稿機能を実装しましょう。
 
 まず**freezed**ですが、これは**immutableな(変更不可能な)クラス**が必要とするいろいろな機能を、\
 イイ感じに生成してくれるパッケージです。
@@ -39,7 +39,7 @@ abstract class Post with _$Post {
 * `postmodal/postmodal_viewmodel.dart`の`changeBody`のコメントアウトを削除。
 
 {% code title="postmodal/postmodal_viewmodel.dart(一部省略)" %}
-```dart
+```diff
 final postStateNotifierProvider = StateNotifierProvider<PostStateNotifier>((ref) {
   return PostStateNotifier();
 });
@@ -98,7 +98,7 @@ todo: いい感じの図
 * `postmodal/postmodal_viewmodel.dart`の`addPost`のコメントアウトを削除。
 
 {% code title="postmodal/postmodal_viewmodel.dart(一部省略)" %}
-```dart
+```diff
 class PostStateNotifier extends StateNotifier<Post> {
   PostStateNotifier(this.user, this.posts) : super(const Post());
   final StateController<bool> user; // timeline_viewmodelのユーザー情報
