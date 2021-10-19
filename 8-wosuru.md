@@ -62,6 +62,8 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 フォームのテキストに連動して文字数がカウントされるようになったかと思います。
 
+![](<.gitbook/assets/image (9).png>)
+
 ### 解説
 
 軽く解説を行います。
@@ -78,7 +80,7 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 そしてフォームに文字を打ち込むごとに値を更新し、その結果を文字数カウントに反映させることで、\
 **テキストフォーム**と**Provider**と**文字数カウント**でデータバインディングするようにしています。
 
-todo: いい感じの図
+![](<.gitbook/assets/image (8).png>)
 
 自分の値を書き換えるときは`state = state.copyWith(body: value)`と記述します。
 

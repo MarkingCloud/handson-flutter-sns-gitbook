@@ -136,8 +136,6 @@ final postsProvider = StateProvider(
 {% endtab %}
 {% endtabs %}
 
-###
-
 ## 2. StateProviderのユーザー情報を更新する
 
 次に**StateProvider**の値を更新してみましょう。
