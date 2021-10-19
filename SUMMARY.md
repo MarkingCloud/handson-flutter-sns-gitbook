@@ -8,4 +8,4 @@
 * [6. Flutterでの状態管理について](6-flutterdenonitsuite.md)
 * [7. 投稿リスト / アイコンを表示する](7-risuto-aikonwosuru.md)
 * [8. 投稿機能を実装する](8-wosuru.md)
-* [9. 最後に](9-ni.md)
+* [9. おわりに](9-ni.md)
