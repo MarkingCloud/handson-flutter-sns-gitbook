@@ -4,10 +4,8 @@
 
 次は![](<.gitbook/assets/freezed (1).png>)**freezed** と![](<.gitbook/assets/statenotifier (1).png>)**StateNotifier** も使って、投稿機能を実装しましょう。
 
-まず**freezed**ですが、これは**immutableな(変更不可能な)クラス**が必要とするいろいろな機能を、\
-イイ感じに生成してくれるパッケージです。
+**freezed**は**immutableな(変更不可能な)クラス**がイイ感じに生成してくれるライブラリでした。今までに何回か登場している**Postクラス**が**freezed**で作成したクラスにです。
 
-今までに何回か登場している**Postクラス**が**freezed**で作成したクラスになっています。\
 `abstract/post.dart`で定義されています。(freezed独特の書き方をします)
 
 {% code title="abstract/post.dart " %}
@@ -25,8 +23,7 @@ abstract class Post with _$Post {
 ```
 {% endcode %}
 
-**StateNotifier**は値に変更があったときに自動で通知を飛ばしてくれるクラスです。\
-状態の変化に反応して動的に値を表示するような処理をスッキリ書くことが出来ます。
+**StateNotifier**は値に変更があったときに自動で通知を飛ばしてくれるライブラリでした。
 
 そしてこれらを組み合わせた**StateNotifierProvider**というProviderを作ることで、\
 データバインディングを実現することが出来ます。
@@ -72,7 +69,7 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 **postStateNotifierProvider**は**StateNotifierProvider**をインスタンス化したものです。\
 中身は**PostStateNotifier**でこれは**PostクラスをStateNotifier**でラップしたものになります。
 
-分かりにくいですね、、、簡単に言うとこのProviderは、
+分かりにくいですね、、、簡単に言うと次のようなProviderを作成しています。
 
 1. Postの型に従ったデータを持っています
 2. 自分の値を変更するメソッドを持っています
@@ -86,7 +83,7 @@ todo: いい感じの図
 自分の値を書き換えるときは`state = state.copyWith(body: value)`と記述します。
 
 `state`で自分自身にアクセスし、`copyWith`で現在の値をコピーした上で新しい値で更新します。\
-`copyWith`メソッドは**freezedが自動で生成**してくれたメソッドです\*\*。\*\*(自力で書くとかなり大変)
+`copyWith`メソッドは**freezedが自動で生成**してくれたメソッドです。(自力で書くとかなり大変)
 
 ## 2. 投稿機能を実装
 

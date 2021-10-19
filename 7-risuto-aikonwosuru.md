@@ -2,13 +2,7 @@
 
 ## 1. StateProviderで投稿リストを保持する
 
-まずは![](<.gitbook/assets/riverpod (1).png>)**Riverpod** と![](<.gitbook/assets/flutterhooks (1).png>) **Flutter Hooks** を使って投稿リストを作成しましょう。
-
-ここでは**Riverpod**の**StateProvider**を使います。\
-**StateProvider**とは状態を保持できるシンプルなProviderです。
-
-使い方は、**StateProviderクラス**の中で保持したい値をreturnするだけです。\
-呼び出したいときは**Flutter Hooks**の**useProvider**を使うことで簡単にアクセスすることが出来ます。
+まずは![](<.gitbook/assets/riverpod (1).png>)**Riverpod** と![](<.gitbook/assets/flutterhooks (1).png>) **Flutter Hooks** を使って投稿リストを作成します。
 
 では実際に使って動きを見てみましょう。次の操作を行ってください。
 
@@ -63,44 +57,18 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 軽く解説を行います。
 
+まずは`timeline/timeline_viewmodel.dart`の`postProvider`を確認してください。
 
+ここでは**Riverpod**の**StateProvider**を使っています。\
+**StateProvider**とは状態を保持できるシンプルなProviderです。
 
-* `timeline/timeline_view.dart`の`_timeLine`を確認。
+使い方は、**StateProviderクラス**の中で保持したい値をreturnするだけです。
+
+次に`timeline/timeline_view.dart`の`_timeLine`を確認してください。
+
+ここで**Flutter Hooks**の**useProvider**を使ってstatus呼び出しています。中の値を取り出して使うときは`変数.state`で呼び出します。
 
 {% tabs %}
-{% tab title="view" %}
-{% code title="timeline/timeline_view.dart" %}
-```dart
-  // bodyの要素
-  Widget _timeLine(BuildContext context) {
-    final posts = useProvider(postsProvider); // ここでposts呼び出し
-    return _timeLineCards(context, posts.state); // 変数.state で値にアクセスできる
-  }
-
-  Widget _timeLineCards(BuildContext context, List posts) {
-    return ListView.builder(
-      itemCount: posts.length,
-      itemBuilder: (context, index) {
-        return _postCard(posts[index]);
-      },
-      reverse: true,
-    );
-  }
-
-  Widget _postCard(Post post) {
-    return Card(
-      child: ListTile(
-        leading: _postIcon(post),
-        title: Text(post.user),
-        subtitle: Text(post.body),
-        isThreeLine: true,
-      ),
-    );
-  }
-```
-{% endcode %}
-{% endtab %}
-
 {% tab title="viewmodel" %}
 {% code title="timeline/timeline_viewmodel.dart" %}
 ```dart
@@ -130,6 +98,39 @@ final postsProvider = StateProvider(
     ),
   ],
 );
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="view" %}
+{% code title="timeline/timeline_view.dart" %}
+```dart
+  // bodyの要素
+  Widget _timeLine(BuildContext context) {
+    final posts = useProvider(postsProvider); // ここでposts呼び出し
+    return _timeLineCards(context, posts.state); // 変数.state で値にアクセスできる
+  }
+
+  Widget _timeLineCards(BuildContext context, List posts) {
+    return ListView.builder(
+      itemCount: posts.length,
+      itemBuilder: (context, index) {
+        return _postCard(posts[index]);
+      },
+      reverse: true,
+    );
+  }
+
+  Widget _postCard(Post post) {
+    return Card(
+      child: ListTile(
+        leading: _postIcon(post),
+        title: Text(post.user),
+        subtitle: Text(post.body),
+        isThreeLine: true,
+      ),
+    );
+  }
 ```
 {% endcode %}
 {% endtab %}
