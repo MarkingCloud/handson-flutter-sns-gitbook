@@ -59,10 +59,10 @@ class TimeLinePage extends HookWidget {
   // Todo
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('Time Line'),
-      //   actions: [_userIcon(), _authButton()],
-      // ),
+       appBar: AppBar(
+         title: const Text('Time Line'),
+         actions: [_userIcon(), _authButton()],
+       ),
       body: _timeLine(context),
       // floatingActionButton: _postButton(context),
     );
