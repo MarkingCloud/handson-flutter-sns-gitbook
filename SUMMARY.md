@@ -5,3 +5,4 @@
 * [3. Firebaseとは](3-firebasetoha.md)
 * [4. 事前準備](4.-shi-qian-zhun-bei.md)
 * [5. Firebaseで認証連携を行う](5-firebasedewou.md)
+* [6. FireStoreでDB連携を行う](6-firestorededbwou.md)
