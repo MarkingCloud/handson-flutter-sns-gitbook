@@ -100,4 +100,59 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 ここでは **FirebaseAuth.instance.authStateChanges** というメソッドでFirebaseAuthの**認証情報の変化**を**Stream型**で取得しています。Stream型とは監視対象からの通知によってデータ取得する(Pub/Subと言われるモデル)場合に利用される型です。
 
-kon
+`authModelProvider`は以下のように利用します。
+
+* `useProvider`を使ってView側で呼び出す。
+* `.when`メソッドでデータ取得後(data)、データ取得中(loading)、エラー時(error)の処理を記述。
+
+例として`timeline/timeline_view.dart`の`_authButton`を確認してみましょう。
+
+{% code title="timeline/timeline_view.dart" %}
+```dart
+  Widget _authButton() {
+    final user = useProvider(authProvider);
+    return user.when(
+      data: (user) {
+        if (user == null) {
+          return _signInButton();
+        } else {
+          return _signOutButton();
+        }
+      },
+      loading: () => const CircularProgressIndicator(),
+      error: (err, stackTrace) => Text(err.toString()),
+    );
+  }
+```
+{% endcode %}
+
+次に`getCurrentUser`を確認してください。
+
+ここで利用されている**FirebaseAuth.instance.currentUser**はキャッシュから現在ログイン中のユーザー情報を取得するメソッドです。
+
+非同期的な処理のStream型と違い同期的な処理 (外部通信の待ち時間が発生しない処理) なので使い勝手が良く、別途用意しています。
+
+使い方は普通のメソッドと同様です。`postmodal/postmodal_viewmodel.dart`の`addPost`を確認してみてください。
+
+{% code title="postmodal/postmodal_viewmodel.dart" %}
+```dart
+  void addPost() {
+    final user = getCurrentUser();
+    if (user != null) {
+      state = state.copyWith(
+        user: user.displayName.toString(),
+        uid: user.uid,
+        photoURL: user.photoURL.toString(),
+        timeStamp: DateTime.now(),
+      );
+    } else {
+      state = state.copyWith(
+        user: 'anonymous',
+        uid: 'anonymous',
+        timeStamp: DateTime.now(),
+      );
+    }
+    addPostDB(state);
+  }
+```
+{% endcode %}
