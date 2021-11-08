@@ -25,6 +25,8 @@
 次の操作を行ってください
 
 {% hint style="success" %}
+### work
+
 * `model/auth_model.dart`の`signInAuth`と`signOutAuth`のコメントアウトを解除。
 
 {% code title="model/auth_model.dart " %}
@@ -60,6 +62,8 @@ Firebase コンソール の Authentication > Users に自分の情報が登録�
 次の操作を行ってください
 
 {% hint style="success" %}
+### work
+
 * `model/auth_model.dart`の`authModelProvider`と`getCurrentUser`のコメントアウトを解除。
 
 {% code title="model/auth_model.dart " %}

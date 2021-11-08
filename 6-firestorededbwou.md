@@ -2,6 +2,22 @@
 
 ## 1. FireStoreを有効にする
 
+最初にFirebaseの管理画面からGoogleアカウントの認証機能を有効にしましょう。
+
+次の操作を行ってください。
+
+{% hint style="success" %}
+### work
+
+* [**Firebase コンソール**](https://console.firebase.google.com)へ移動する
+* Authentication > 始める > Sign-in method > 追加プロバイダ > Google を選択
+* 「有効にする」を選択 > 「プロジェクトサポートメール」を選択 > 保存を選択
+* 承認済みドメイン > ドメインを追加 を選択
+* アプリを開いているページのURLを張り付け > 追加を選択
+{% endhint %}
+
+{% embed url="https://scribehow.com/shared/FireStore__HI7dy8FUQxatkxRQwvun_A" %}
+
 ## 2. データを書き込む処理を実装する
 
 次の操作を行ってください
