@@ -94,8 +94,6 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 ### 解説
 
-軽く解説を行います。
-
 まずは `authModelProvider` を確認してください。
 
 ここでは **FirebaseAuth.instance.authStateChanges** というメソッドでFirebaseAuthの**認証情報の変化**を**Stream型**で取得しています。Stream型とは監視対象からの通知によってデータ取得する(Pub/Subと言われるモデル)場合に利用される型です。

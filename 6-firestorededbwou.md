@@ -1,26 +1,22 @@
 # 6. FireStoreでDB連携を行う
 
-## 1. FireStoreを有効にする
+## 1. Firestoreを有効にする
 
-最初にFirebaseの管理画面からGoogleアカウントの認証機能を有効にしましょう。
-
-次の操作を行ってください。
+Firestoreを有効にします。次の操作を行ってください。
 
 {% hint style="success" %}
 ### work
 
 * [**Firebase コンソール**](https://console.firebase.google.com)へ移動する
-* Authentication > 始める > Sign-in method > 追加プロバイダ > Google を選択
-* 「有効にする」を選択 > 「プロジェクトサポートメール」を選択 > 保存を選択
-* 承認済みドメイン > ドメインを追加 を選択
-* アプリを開いているページのURLを張り付け > 追加を選択
+* Firestore Database > データベースの作成 を選択
+* テストモードで開始する > 次へ > asia-northeast1 > 有効にする を選択
 {% endhint %}
 
 {% embed url="https://scribehow.com/shared/FireStore__HI7dy8FUQxatkxRQwvun_A" %}
 
 ## 2. データを書き込む処理を実装する
 
-次の操作を行ってください
+データを書き込む処理を実装しましょう。次の操作を行ってください。
 
 {% hint style="success" %}
 * `model/posts_model.dart`の`addPstDB`のコメントアウトを解除。
@@ -40,11 +36,19 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 ```
 {% endhint %}
 
+投稿ボタンを押すことで、Firestoreにデータが追加されることを確認しましょう。
+
+### 解説
+
+Firestoreにデータを書き込む方法はいくつかありますが、今回は**add**を使って**postsコレクション**にデータを追加しています。
+
+また、postクラスのままだとFirestoreに追加できないので、toJsonメソッド\*でjson形式にしています。
+
+\*toJsonメソッドは[freezed](https://app.gitbook.com/s/-MkUYx1nH-LtZrLYKsQ9-103505250/6-flutterdenonitsuite#freezed)の機能です。
+
 ## &#x20;3. データを取得する処理を実装する
 
-
-
-次の操作を行ってください
+次にFirestoreからデータを取得します。次の操作を行ってください。
 
 {% hint style="success" %}
 * `model/posts_model.dart`の`postsModelProvider`のコメントアウトを解除。
@@ -74,3 +78,15 @@ final postsModelProvider = StreamProvider.autoDispose((ref) {
 flutter run -d web-server --web-port=8080 --web-renderer html
 ```
 {% endhint %}
+
+これでFirestoreのデータが投稿カードとしてアプリに表示されるようになりました。
+
+### 解説
+
+`postsModelProvider`を確認してください。
+
+ここでもAuthと同じStream型とするため`StreamProvider`を利用しています。
+
+メソッドの中では、`.collection`でpostsを指定し、`.orderBy`で時間順に並び替え、`.snapshots`でデータをStream型で受け取っています。受け取ったデータはjson形式のため、fromJsonメソッド\*\*でpost型に変換して受け取るようにしています。
+
+\*\*fromJsonメソッドも[freezed](https://app.gitbook.com/s/-MkUYx1nH-LtZrLYKsQ9-103505250/6-flutterdenonitsuite#freezed)の機能です。
