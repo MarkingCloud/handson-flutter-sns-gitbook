@@ -6,4 +6,5 @@
 * [4. 事前準備](4.-shi-qian-zhun-bei.md)
 * [5. Firebaseで認証連携を行う](5-firebasedewou.md)
 * [6. FireStoreでDB連携を行う](6-firestorededbwou.md)
+* [Page 1](page-1.md)
 * [7. おわりに](7-owarini.md)

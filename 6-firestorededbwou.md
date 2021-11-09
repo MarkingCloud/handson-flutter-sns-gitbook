@@ -1,6 +1,34 @@
 # 6. FireStoreでDB連携を行う
 
-## 1. Firestoreを有効にする
+## 1. Cloud Firestore とは <a href="1-cloud-firestore-toha" id="1-cloud-firestore-toha"></a>
+
+![](https://markingcloud.github.io/handson-markdowne-editor\_part2-firebase/vuepress/docs/curriculums/firestore2.png)
+
+Firebase が標準で用意している **NoSQL** の DB です。
+
+ここで **RDB** と **NoSQL** の違いを説明しておきます。
+
+**RDB** とは**データの整合性**に重点を置き、データを比較/調整しながらを処理する DB の事です。\
+Oracle Database、MySQL などはこれを操作するため **RDBMS** と呼ばれます。
+
+**NoSQL** とは RDB 以外の全ての DB の事を指します。\
+データの整合性よりも**早く処理できること**を優先しているという特徴があります。
+
+特徴を比較すると以下のようになります。
+
+|                           | RDB                                           | NoSQL                                      |
+| ------------------------- | --------------------------------------------- | ------------------------------------------ |
+| 重点                        | データの整合性を重視                                    | 処理が速く軽量である点を重視                             |
+| データ形式                     | 行列による管理                                       | json/ドキュメント/Key-Value 指向など様々               |
+| データ操作                     | SQL 文を利用                                      | DB ごとに独自実装、共通言語は無い                         |
+| データの精度                    | 高い                                            | 低い                                         |
+| <p>分散性<br>(多拠点展開への対応)</p> | 低い                                            | 高い                                         |
+| サービス例                     | <p>Oracle Database<br>MySQL<br>PostgreSQL</p> | <p>Cloud Firestore<br>MongoDB<br>Redis</p> |
+
+Cloud Firestore はドキュメント指向の NoSQL になります。\
+**コレクション**と**ドキュメント**ごとに**オブジェクト**でデータを管理することができます。
+
+## 2. Firestoreを有効にする
 
 Firestoreを有効にします。次の操作を行ってください。
 
@@ -14,7 +42,7 @@ Firestoreを有効にします。次の操作を行ってください。
 
 {% embed url="https://scribehow.com/shared/FireStore__HI7dy8FUQxatkxRQwvun_A" %}
 
-## 2. データを書き込む処理を実装する
+## 3. データを書き込む処理を実装する
 
 データを書き込む処理を実装しましょう。次の操作を行ってください。
 
@@ -46,7 +74,7 @@ Firestoreにデータを書き込む方法はいくつかありますが、今�
 
 \*toJsonメソッドは[freezed](https://app.gitbook.com/s/-MkUYx1nH-LtZrLYKsQ9-103505250/6-flutterdenonitsuite#freezed)の機能です。
 
-## &#x20;3. データを取得する処理を実装する
+## &#x20;4. データを取得する処理を実装する
 
 次にFirestoreからデータを取得します。次の操作を行ってください。
 
