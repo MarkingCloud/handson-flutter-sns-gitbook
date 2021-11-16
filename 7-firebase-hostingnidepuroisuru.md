@@ -1,4 +1,4 @@
-# 7. アプリをFirebaseにデプロイする
+# 7. Firebase Hostingにデプロイする
 
 ## 1. Firebase Hostingとは
 
@@ -6,7 +6,7 @@
 
 Firebase HostingとはFirebaseの持っているホスティングサービスです。
 
-コマンド一つで簡単にデプロイできる上、デフォルトで次のようなことを自動で行ってくれます。
+コマンド一つで簡単にデプロイできる上に、デフォルトで次のようなことを自動で行ってくれます。
 
 * ドメインの付与
 * TLS による暗号化（HTTPS 化）
@@ -32,7 +32,7 @@ Firebase HostingとはFirebaseの持っているホスティングサービス�
 ```
 {% endcode %}
 
-### 2. デプロイしてみる <a href="1-sassokutefuroishitemiru" id="1-sassokutefuroishitemiru"></a>
+## 2. デプロイしてみる <a href="1-sassokutefuroishitemiru" id="1-sassokutefuroishitemiru"></a>
 
 それでは Hosting にデプロイしてみましょう。
 

@@ -6,5 +6,5 @@
 * [4. 事前準備](4.-shi-qian-zhun-bei.md)
 * [5. Firebaseで認証連携を行う](5-firebasedewou.md)
 * [6. FireStoreでDB連携を行う](6-firestorededbwou.md)
-* [7. アプリをFirebaseにデプロイする](7-apuriwofirebasenidepuroisuru.md)
+* [7. Firebase Hostingにデプロイする](7-firebase-hostingnidepuroisuru.md)
 * [8. おわりに](8-owarini.md)
