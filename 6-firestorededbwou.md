@@ -48,7 +48,7 @@ Cloud Firestore はドキュメント指向の NoSQL になります。\
 Firestoreを有効にします。次の操作を行ってください。
 
 {% hint style="success" %}
-### work
+**work**
 
 * [**Firebase コンソール**](https://console.firebase.google.com)へ移動する
 * Firestore Database > データベースの作成 を選択
@@ -62,6 +62,8 @@ Firestoreを有効にします。次の操作を行ってください。
 データを書き込む処理を実装しましょう。次の操作を行ってください。
 
 {% hint style="success" %}
+**work**
+
 * `model/posts_model.dart`の`addPstDB`のコメントアウトを解除。
 
 {% code title="model/posts_model.dart " %}
@@ -94,6 +96,8 @@ Firestoreにデータを書き込む方法はいくつかありますが、今�
 次にFirestoreからデータを取得します。次の操作を行ってください。
 
 {% hint style="success" %}
+**work**
+
 * `model/posts_model.dart`の`postsModelProvider`のコメントアウトを解除、最終行はコメントアウトしてください。
 
 {% code title="lib/model/posts_model.dart " %}

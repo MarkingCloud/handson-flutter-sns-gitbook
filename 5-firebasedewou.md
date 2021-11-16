@@ -7,7 +7,7 @@
 次の操作を行ってください。
 
 {% hint style="success" %}
-### work
+**work**
 
 * [**Firebase コンソール**](https://console.firebase.google.com)へ移動する
 * Authentication > 始める > Sign-in method > 追加プロバイダ > Google を選択
@@ -25,7 +25,7 @@
 次の操作を行ってください
 
 {% hint style="success" %}
-### work
+**work**
 
 * `lib/model/auth_model.dart`の以下のコメントアウトを解除
   * `authModelProvider` (最終行はコメントアウト)

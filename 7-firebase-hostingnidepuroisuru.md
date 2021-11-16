@@ -39,7 +39,7 @@ Firebase HostingとはFirebaseの持っているホスティングサービス�
 Gitpod のコンソールから次の操作を行ってください。
 
 {% hint style="success" %}
-### work
+**work**
 
 * FlutterのコードをWeb用にビルドする。
 
