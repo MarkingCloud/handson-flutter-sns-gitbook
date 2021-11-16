@@ -1,6 +1,6 @@
 # 5. Firebaseで認証連携を行う
 
-## 1. Firebase Authを有効にする
+## 1. Firebase Authenticationを有効にする
 
 最初にFirebaseの管理画面からGoogleアカウントの認証機能を有効にしましょう。
 
@@ -20,24 +20,43 @@
 
 ## 2. サインイン・サインアウト機能を実装する
 
-まずはFirebaseのAuth使った認証連携を実装しましょう。
+それでは早速、FirebaseのAuthentication使った認証連携を実装しましょう。
 
 次の操作を行ってください
 
 {% hint style="success" %}
 ### work
 
-* `model/auth_model.dart`の`signInAuth`と`signOutAuth`のコメントアウトを解除。
+* `lib/model/auth_model.dart`の以下のコメントアウトを解除
+  * `authModelProvider` (最終行はコメントアウト)
+  * `signInAuth`
+  * `signOutAuth`
+  * `getCurrentUser` (最終行はコメントアウト)
 
-{% code title="model/auth_model.dart " %}
+{% code title="lib/model/auth_model.dart " %}
 ```dart
+final authModelProvider = StreamProvider.autoDispose((ref) {
++ return FirebaseAuth.instance.authStateChanges();
+- // return Stream<User?>.value(null); // 不要なためコメントアウト
+});
+
 void signInAuth() {
 +  GoogleAuthProvider googleProvider = GoogleAuthProvider();
 +  FirebaseAuth.instance.signInWithPopup(googleProvider);
 }
 
-void signOutAuth() async {
+void signOutAuth() {
 +  FirebaseAuth.instance.signOut();
+}
+
+User? getCurrentUser() {
++  final user = FirebaseAuth.instance.currentUser;
++  if (user != null) {
++    return user;
++  } else {
++    return null;
++  }
+-  // return null; // 不要なためコメントアウト
 }
 ```
 {% endcode %}
@@ -55,48 +74,17 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 Firebase コンソール の Authentication > Users に自分の情報が登録されていれば成功です。
 
-## 3. ユーザー情報を取得する処理を実装する
-
-次にログイン情報を取得する処理を実装しましょう。
-
-次の操作を行ってください
-
-{% hint style="success" %}
-### work
-
-* `model/auth_model.dart`の`authModelProvider`と`getCurrentUser`のコメントアウトを解除。
-
-{% code title="model/auth_model.dart " %}
-```dart
-final authModelProvider = StreamProvider.autoDispose((ref) {
-+ return FirebaseAuth.instance.authStateChanges();
-- // return Stream<User?>.value(null);
-});
-
-User? getCurrentUser() {
-+  final user = FirebaseAuth.instance.currentUser;
-+  if (user != null) {
-+    return user;
-+  } else {
-+    return null;
-+  }
--  // return null;
-}
-```
-{% endcode %}
-
-* webサーバーをリロードする（実行を止めてしまった場合は再実行）。
-
-```bash
-flutter run -d web-server --web-port=8080 --web-renderer html
-```
-{% endhint %}
-
 ### 解説
+
+簡単に解説を行います。
 
 まずは `authModelProvider` を確認してください。
 
-ここでは **FirebaseAuth.instance.authStateChanges** というメソッドでFirebaseAuthの**認証情報の変化**を**Stream型**で取得しています。Stream型とは監視対象からの通知によってデータ取得する(Pub/Subと言われるモデル)場合に利用される型です。
+ここでは **FirebaseAuth.instance.authStateChanges** というメソッドでFirebaseAuthの**認証情報の変化**を**Stream型**で取得しています。
+
+Stream型とは対象からの通知によりデータ取得する場合(Pub/Subモデル)に利用される型です。
+
+![](.gitbook/assets/pubsub.png)
 
 `authModelProvider`は以下のように利用します。
 
@@ -105,7 +93,7 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 
 例として`timeline/timeline_view.dart`の`_authButton`を確認してみましょう。
 
-{% code title="timeline/timeline_view.dart" %}
+{% code title="lib/timeline/timeline_view.dart" %}
 ```dart
   Widget _authButton() {
     final user = useProvider(authProvider);
@@ -124,15 +112,63 @@ flutter run -d web-server --web-port=8080 --web-renderer html
 ```
 {% endcode %}
 
-次に`getCurrentUser`を確認してください。
+次に`signInAuth`と`signOutAuth`を確認してください。
 
-ここで利用されている**FirebaseAuth.instance.currentUser**はキャッシュから現在ログイン中のユーザー情報を取得するメソッドです。
+ここではGoogle認証を行う処理を記述しています。非常に短く記述することが出来ます。
 
-非同期的な処理のStream型と違い同期的な処理 (外部通信の待ち時間が発生しない処理) なので使い勝手が良く、別途用意しています。
+`timeline_viewmodel.dart`を経由して`timeline_view.dart`の`_signInButton`と`_signOutButton`で利用されています。
 
-使い方は普通のメソッドと同様です。`postmodal/postmodal_viewmodel.dart`の`addPost`を確認してみてください。
+{% tabs %}
+{% tab title="Viewmodel" %}
+{% code title="lib/timeline/timeline_viewmodel.dart" %}
+```dart
+import '/model/auth_model.dart';
 
-{% code title="postmodal/postmodal_viewmodel.dart" %}
+void signIn() {
+  signInAuth();
+}
+
+void signOut() {
+  signOutAuth();
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="View" %}
+{% code title="lib/timeline/timeline_view.dart" %}
+```dart
+  Widget _signInButton() {
+    return IconButton(
+      onPressed: () {
+        signIn();
+      },
+      icon: const Icon(Icons.login),
+    );
+  }
+
+  Widget _signOutButton() {
+    return IconButton(
+      onPressed: () {
+        signOut();
+      },
+      icon: const Icon(Icons.logout),
+    );
+  }
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+最後に`getCurrentUser`を確認してください。
+
+ここで利用されている**FirebaseAuth.instance.currentUser**は取得済みのユーザー情報を利用する際に使われるメソッドです。
+
+.(ドット)を使ってdisplayNameやuidにアクセスできます。
+
+`postmodal/postmodal_viewmodel.dart`の`addPost`を確認してみてください。
+
+{% code title="lib/postmodal/postmodal_viewmodel.dart" %}
 ```dart
   void addPost() {
     final user = getCurrentUser();

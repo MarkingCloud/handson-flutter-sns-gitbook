@@ -9,17 +9,17 @@
 
 ## Firebase とは何か(ちょっと)分かる
 
-Firebaase とは何かを解説します。\
+Firebase とは何かを解説します。\
 ちょっとだけ語れるようになります。
 
 ![](https://markingcloud.github.io/handson-markdowne-editor\_part2-firebase/vuepress/docs/curriculums/firebase.png)
 
-## Firebase Authentication の使い方が(ちょっと)分かる
+## Firebase Authentication が(ちょっと)分かる
 
-Firebase Auth の使い方を解説します。\
+Firebase Authentication の使い方を解説します。\
 また、Flutterでのログイン状態の切り変えについてコードを確認します。
 
-**図を挿入**
+![](<.gitbook/assets/Firebase Authentication (5- Horizontal Lockup, Use in Firebase Contexts Only, Light) (1).png>)
 
 ## Firestore の使い方が(ちょっと)分かる
 

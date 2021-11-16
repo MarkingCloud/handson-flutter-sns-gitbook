@@ -31,7 +31,7 @@
     * **ホスティング：Hosting**
     * **データベース：Cloud Firestore**
     * ストレージ
-    * 認証
+    * **認証：Authentication**
     * ランタイム
 * Release & Monitor
   * 監視と分析
@@ -52,9 +52,10 @@
 
 [Firebase Pricing(opens new window)](https://firebase.google.com/pricing)
 
-| プロダクト                                                                                                    | 無料(Spark プラン)                                              | 従量制(Blaze プラン)\*                                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p><strong>Hosting</strong><br>ストレージ<br>Data transfer<br>Custom domain &#x26; SSL<br>プロジェクトごとに複数のサイト</p> | <p><br>10 GB<br>360 MB/day<br>✔<br>✔</p>                   | <p><br>$0.026/GB<br>$0.15/GB<br>✔<br>✔</p>                                                                                                                        |
-| <p><strong>Cloud Firestore</strong><br>保存データ<br>下りネットワーク<br>ドキュメントの書き込み<br>ドキュメントの読み取り<br>ドキュメントの削除</p>  | <p><br>合計 1 GiB<br>10 GiB/月<br>2 万/日<br>5 万/日<br>2 万/日</p> | <p><br>$0.18/GiB<br><a href="https://cloud.google.com/firestore/pricing">Google Cloud pricing(opens new window)</a><br>$0.18/10 万<br>$0.06/10 万<br>$0.02/10 万</p> |
+| プロダクト                                                                                                    | 無料(Spark プラン)                                                 | 従量制(Blaze プラン)\*                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>Hosting</strong><br>ストレージ<br>Data transfer<br>Custom domain &#x26; SSL<br>プロジェクトごとに複数のサイト</p> | <p>10 GB<br>360 MB/day<br>✔<br>✔</p>                          | <p>$0.026/GB<br>$0.15/GB<br>✔<br>✔</p>                                                                                                                        |
+| <p><strong>Cloud Firestore</strong><br>保存データ<br>下りネットワーク<br>ドキュメントの書き込み<br>ドキュメントの読み取り<br>ドキュメントの削除</p>  | <p></p><p>合計 1 GiB<br>10 GiB/月<br>2 万/日<br>5 万/日<br>2 万/日</p> | <p>$0.18/GiB<br><a href="https://cloud.google.com/firestore/pricing">Google Cloud pricing(opens new window)</a><br>$0.18/10 万<br>$0.06/10 万<br>$0.02/10 万</p> |
+| <p><strong>Authentication</strong></p><p>電話認証 </p><p>他の認証サービス</p>                                        | <p></p><p>1 万/月</p><p>✔</p>                                   | <p></p><p>$0.06/認証</p><p>✔</p>                                                                                                                                |
 
 \*Spark プランの無料使用量を含む
