@@ -71,19 +71,55 @@ keytool -list -v -alias upload -keystore ./upload-keystore.jks
 
 ![](<.gitbook/assets/image (7).png>)
 
-## 4. アプリを作成する
+## 4. アプリを登録する
 
-F`web/in`
+FirebaseでAndroidアプリの登録を行います。
 
-`ex.html`設定を記述してCDN経由でFirebaseSDKを取得する必要があります。Firebase\
 次の操作を行ってください。
 
 {% hint style="success" %}
 **work**
 
-* コンソールトップ画面の Android マーク (\</>) を選択
+* コンソールトップ画面の Android マーク を選択
 * 任意のアプリのニックネームを設定
-* 「アプリを登録」を選択（チェックボックスは空のまま）
-* firebaseConfigの内容をコピーする
-* 「コンソールに進む」を選択
+* 「デバッグ用の署名証明書 SHI-1」に先ほどコピーした文字列を入力
+* 「アプリを登録」を選択
+* 2, 3, 4は何もせず「次へ」を選択
+  * FlutterFireというライブラリで吸収しているため操作不要
 {% endhint %}
+
+{% embed url="https://scribehow.com/shared/__6dkiGLXdSJmC_UCKZqJNDQ" %}
+
+## 5. Firebase Authenticationを有効にする
+
+最初にFirebaseの管理画面からGoogleアカウントの認証機能を有効にしましょう。
+
+次の操作を行ってください。
+
+{% hint style="success" %}
+**work**
+
+* [**Firebase コンソール**](https://console.firebase.google.com)へ移動する
+* Authentication > 始める > Sign-in method > 追加プロバイダ > Google を選択
+* 「有効にする」を選択 > 「プロジェクトサポートメール」を選択 > 保存を選択
+* 承認済みドメイン > ドメインを追加 を選択
+* アプリを開いているページのURLを張り付け > 追加を選択
+{% endhint %}
+
+{% embed url="https://scribehow.com/shared/Firebase_Auth__P2kC24BFQfOxN0ZKPgHbvQ" %}
+
+## 6. Firestoreを有効にする
+
+Firestoreを有効にします。次の操作を行ってください。
+
+{% hint style="success" %}
+**work**
+
+* [**Firebase コンソール**](https://console.firebase.google.com)へ移動する
+* Firestore Database > データベースの作成 を選択
+* テストモードで開始する > 次へ > asia-northeast1 > 有効にする を選択
+{% endhint %}
+
+{% embed url="https://scribehow.com/shared/FireStore__HI7dy8FUQxatkxRQwvun_A" %}
+
+これでFirebaseとの連携も完了となります！
