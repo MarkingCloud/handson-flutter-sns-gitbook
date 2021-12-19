@@ -158,4 +158,9 @@ NoxPlayerを使ってAPKファイルの動作確認を行ってみましょう�
 
 * APKファイルをCodemagicからダウンロードする
 * NoxPlayerにAPKファイルをドラック＆ドロップする
+* アイコンをクリックする
 {% endhint %}
+
+![](<.gitbook/assets/image (9).png>)
+
+無事にアプリが開いたら成功です！
