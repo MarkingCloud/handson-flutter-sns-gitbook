@@ -1,3 +1,3 @@
 # Table of contents
 
-* [はじめに](README.md)
+* [1. ハンズオン概要](README.md)
