@@ -1,2 +1,89 @@
 # 7. Firebaseと連携する(オプション)
 
+Firebaseと連携させるために必要な設定を行います。
+
+## 1. Firebase プロジェクトを作成する
+
+Firebase のプロジェクトを作成しましょう。次の操作を行ってください。
+
+{% hint style="success" %}
+**work**
+
+* [**Firebase コンソール**](https://console.firebase.google.com)を開く
+* 「プロジェクトを追加」を選択。
+* 好きなプロジェクト名を入力して「続行」を選択。
+* **Google アナリティクスは無効**にして「プロジェクトを作成」を選択。
+{% endhint %}
+
+{% embed url="https://scribehow.com/shared/Firebase__k-dMJVzpS7q3sQlRiO8k-g" %}
+
+## 2. プロジェクトとターミナルを紐づける
+
+作成したプロジェクトを Gitpod に紐づけます。コンソールから次の操作を行ってください。
+
+{% hint style="success" %}
+**work**
+
+* 次のコマンドを実行する。
+
+```
+firebase login --no-localhost --reauth
+```
+
+* 出力された URL をクリックする。
+* Firebase にログインしているアカウントと同じアカウントを選択。
+* 権限を確認して許可をクリックする。
+* 出力された認証コードをコンソールに貼り付けてエンターを押下する。
+* 次のコマンドを実行する。
+
+```
+firebase use --add
+```
+
+* 先ほど作成したプロジェクトのプロジェクトIDを選択する。
+* 「what alias do you want to use for this project?」で適当なエイリアス名を入力する。
+* 次のコマンドを実行し、正しいプロジェクトに (current) とついていることを確認する。
+
+```
+firebase projects:list
+```
+{% endhint %}
+
+{% embed url="https://scribehow.com/shared/__2JrWAC0cTVCMsOBKLr2TTg" %}
+
+## 3. フィンガープリントを取得する
+
+Firebaseに登録するフィンガープリントを取得します。
+
+次の操作を行ってください。
+
+{% hint style="success" %}
+**work**
+
+* 次のコマンドを実行してパスワードを入力する。
+
+```
+keytool -list -v -alias upload -keystore ./upload-keystore.jks
+```
+
+* 出力されたSHI1の文字列をコピーする
+{% endhint %}
+
+![](<.gitbook/assets/image (7).png>)
+
+## 4. アプリを作成する
+
+F`web/in`
+
+`ex.html`設定を記述してCDN経由でFirebaseSDKを取得する必要があります。Firebase\
+次の操作を行ってください。
+
+{% hint style="success" %}
+**work**
+
+* コンソールトップ画面の Android マーク (\</>) を選択
+* 任意のアプリのニックネームを設定
+* 「アプリを登録」を選択（チェックボックスは空のまま）
+* firebaseConfigの内容をコピーする
+* 「コンソールに進む」を選択
+{% endhint %}
