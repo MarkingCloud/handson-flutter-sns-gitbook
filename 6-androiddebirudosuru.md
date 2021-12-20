@@ -25,7 +25,7 @@ Androidでアプリをビルドしてリリースするまでに必要な以下�
 * Keystoreを作成する
 
 ```
-keytool -genkey -v -keystore ./upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+keytool -genkey -v -keystore ./android/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 ```
 
 * 以下の通り情報を入力する
