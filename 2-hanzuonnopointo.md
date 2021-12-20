@@ -12,7 +12,7 @@ CI/CDとはどのような用途で利用される技術なのか簡単に解説
 
 自動ビルドのありがたみが(ちょっと)理解できます
 
-![](<.gitbook/assets/image (10).png>)
+![](<.gitbook/assets/image (13).png>)
 
 ## Codemagicについて(ちょっと)わかる
 
@@ -20,7 +20,7 @@ CodemagicとはどのようなCI/CDツールなのか簡単に解説します。
 
 他のツールとの違いが(ちょっと)分かるようになります。
 
-![](<.gitbook/assets/image (9).png>)
+![](<.gitbook/assets/image (12).png>)
 
 ## FlutterのAndroidビルドについて(ちょっと)わかる
 
@@ -28,4 +28,4 @@ FlutterのAndroidビルドの手順を簡単に説明します。
 
 またCodemagicでAndroidビルドを行ってみます。
 
-![](<.gitbook/assets/image (8).png>)
+![](<.gitbook/assets/image (10).png>)
