@@ -123,3 +123,5 @@ Firestoreを有効にします。次の操作を行ってください。
 {% embed url="https://scribehow.com/shared/FireStore__HI7dy8FUQxatkxRQwvun_A" %}
 
 これでFirebaseとの連携も完了となります！
+
+ログインやStoreへのデータ格納が可能になっていると思います。
