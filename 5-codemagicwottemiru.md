@@ -10,8 +10,7 @@
 **work**
 
 * [**Codemagic**](https://codemagic.io/apps) へ移動する
-* Add application を選択
-* Select teamにて「Personal account」を選択 > Next
+* Add your first app を選択
 * Connect repositoryにて「GitHub」を選択 > Next
 * Set up applicationにて作成したレポジトリを選択 > 「Flutter App」を選択 > Finish
 {% endhint %}
