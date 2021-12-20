@@ -63,7 +63,7 @@ Firebaseに登録するフィンガープリントを取得します。
 * 次のコマンドを実行してパスワードを入力する。
 
 ```
-keytool -list -v -alias upload -keystore ./upload-keystore.jks
+keytool -list -v -alias upload -keystore ./android/upload-keystore.jks
 ```
 
 * 出力されたSHI1の文字列をコピーする
