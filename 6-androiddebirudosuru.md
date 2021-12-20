@@ -41,7 +41,7 @@ keytool -genkey -v -keystore ./android/upload-keystore.jks -keyalg RSA -keysize 
 * 作成されたファイルを右クリック > Download
 {% endhint %}
 
-{% embed url="https://scribehow.com/shared/Keystore__f9aHx906TjOS8AfTB4pXMg" %}
+{% embed url="https://scribehow.com/shared/Gitpod_Workflow__BZ4of4a6TSeKgdDqLz1EtA" %}
 
 ## 3. Codemagicの設定を変更する
 
