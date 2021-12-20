@@ -1,4 +1,6 @@
-# 4. 事前準備
+# 4. GitHubの準備
+
+まずCodemagicで読込先となるGitHubのレポジトリを用意しましょう。
 
 ## 1. リポジトリを用意する <a href="#1-rihoshitoriwosuru" id="1-rihoshitoriwosuru"></a>
 
