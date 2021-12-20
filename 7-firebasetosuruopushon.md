@@ -69,7 +69,7 @@ keytool -list -v -alias upload -keystore ./upload-keystore.jks
 * 出力されたSHI1の文字列をコピーする
 {% endhint %}
 
-![](<.gitbook/assets/image (7).png>)
+![](<.gitbook/assets/image (7) (1).png>)
 
 ## 4. アプリを登録する
 
