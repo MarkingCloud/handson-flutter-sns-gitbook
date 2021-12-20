@@ -12,10 +12,12 @@
 * [**Codemagic**](https://codemagic.io/apps) へ移動する
 * Add your first app を選択
 * Connect repositoryにて「GitHub」を選択 > Next
-* Set up applicationにて作成したレポジトリを選択 > 「Flutter App」を選択 > Finish
+* Set up applicationにて
+  * GitHub integration > アカウント > all repositories > Save の順で選択
+  * リロードボタン > 作成したレポジトリ > 「Flutter App」 > Finish の順で選択
 {% endhint %}
 
-{% embed url="https://scribehow.com/shared/__lMkPUn2nTGKyp_aO0Szckw" %}
+{% embed url="https://scribehow.com/shared/__5E1X6kNxRy6MHpSt3RV0Mg" %}
 
 ## 2. Webでビルドしてみる
 
