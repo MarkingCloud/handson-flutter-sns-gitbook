@@ -10,7 +10,7 @@ CI/CD とは「Continuous Integration／Continuous Delivery」の略称です。
 
 チーム間の連携を円滑にするために、開発から運用までの流れを体系化させたモノを指します。
 
-([**こちらの資料** (opens new window)](https://www2.circleci.com/rs/485-ZMH-626/images/001\_DevOpsCulture.pdf)が CI/CD の考え方についてよくまとめられていました。)
+([**こちらの資料** ](https://www2.circleci.com/rs/485-ZMH-626/images/001\_DevOpsCulture.pdf)が CI/CD の考え方についてよくまとめられていました。)
 
 自動でビルド・テストまでする仕組みを **CI**、デプロイまで自動化されたものを **CD** と言います。
 
